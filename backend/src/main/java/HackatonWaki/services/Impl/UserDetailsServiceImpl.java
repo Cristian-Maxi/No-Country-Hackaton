@@ -1,6 +1,7 @@
 package HackatonWaki.services.Impl;
 
 import HackatonWaki.repositorys.IUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,6 +12,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     private IUserRepository userRepository;
 
+    @Autowired
     public UserDetailsServiceImpl(IUserRepository userRepository) {
         this.userRepository = userRepository;
     }

@@ -30,7 +30,7 @@ public class OpenAPI3Configuration {
             description("Server URL in Production environment");
 
     Info info = new Info()
-            .title("Pet API")
+            .title("Waki API")
             .version("1.0")
             .contact(contact)
             .description("Esta API contiene endpoints para la generación para la aplicación de Waki.").termsOfService("https://www.bezkoder.com/terms")

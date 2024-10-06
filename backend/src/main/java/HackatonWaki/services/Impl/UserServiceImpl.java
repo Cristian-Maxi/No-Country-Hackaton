@@ -9,7 +9,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends GenericServiceImpl<User, Long> implements IUserService {
 
-   private IUserRepository repo;
+    private final IUserRepository repo;
+
+    public UserServiceImpl(IUserRepository repo) {
+        this.repo = repo;
+    }
 
     @Override
     protected IGenericRepository<User, Long> getRepo() {

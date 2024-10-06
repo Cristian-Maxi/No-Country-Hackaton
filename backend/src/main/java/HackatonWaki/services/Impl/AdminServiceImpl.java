@@ -8,6 +8,7 @@ import HackatonWaki.repositorys.IAdminRepository;
 import HackatonWaki.repositorys.IGenericRepository;
 import HackatonWaki.repositorys.IUserRepository;
 import HackatonWaki.services.IAdminService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ public class AdminServiceImpl extends GenericServiceImpl<Admin, Long> implements
     private final IUserRepository userRepo;
     private final BCryptPasswordEncoder passwordEncoder; // Cambiado a PasswordEncoder
 
+    @Autowired
     public AdminServiceImpl(IUserRepository userRepo, IAdminRepository repo, PasswordEncoder passwordEncoder) { // Cambiado a PasswordEncoder
         this.userRepo = userRepo;
         this.repo = repo;

@@ -4,6 +4,7 @@ import HackatonWaki.dtos.UserDTO.DatosAutenticacionUsuario;
 import HackatonWaki.dtos.TokenDTO.JWTTokenDTO;
 import HackatonWaki.services.IAutenticacionService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +17,7 @@ public class AutenticacionController {
 
     private final IAutenticacionService autenticacionService;
 
+    @Autowired
     public AutenticacionController(IAutenticacionService autenticacionService) {
         this.autenticacionService = autenticacionService;
     }

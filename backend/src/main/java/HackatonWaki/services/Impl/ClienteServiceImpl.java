@@ -8,6 +8,7 @@ import HackatonWaki.repositorys.IClienteRepository;
 import HackatonWaki.repositorys.IGenericRepository;
 import HackatonWaki.repositorys.IUserRepository;
 import HackatonWaki.services.IClienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -22,6 +23,7 @@ public class ClienteServiceImpl extends GenericServiceImpl<Cliente, Long> implem
     private final IUserRepository userRepo;
     private final BCryptPasswordEncoder passwordEncoder;
 
+    @Autowired
     public ClienteServiceImpl(IUserRepository userRepo, IClienteRepository repo, PasswordEncoder passwordEncoder) {
         this.userRepo = userRepo;
         this.repo = repo;

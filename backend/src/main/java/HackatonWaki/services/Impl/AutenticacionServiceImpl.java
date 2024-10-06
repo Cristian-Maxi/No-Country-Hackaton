@@ -5,6 +5,7 @@ import HackatonWaki.dtos.TokenDTO.JWTTokenDTO;
 import HackatonWaki.models.User;
 import HackatonWaki.services.IAutenticacionService;
 import HackatonWaki.services.ITokenService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -17,6 +18,7 @@ public class AutenticacionServiceImpl implements IAutenticacionService {
     private final AuthenticationManager authenticationManager;
     private final ITokenService tokenService;
 
+    @Autowired
     public AutenticacionServiceImpl(AuthenticationManager authenticationManager, ITokenService tokenService) {
         this.authenticationManager = authenticationManager;
         this.tokenService = tokenService;

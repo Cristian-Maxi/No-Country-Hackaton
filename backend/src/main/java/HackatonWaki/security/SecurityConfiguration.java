@@ -1,5 +1,6 @@
 package HackatonWaki.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -21,6 +22,7 @@ public class SecurityConfiguration {
     private final SecurityFilter securityFilter;
     private final UserDetailsService userDetailsService;
 
+    @Autowired
     public SecurityConfiguration(SecurityFilter securityFilter, UserDetailsService userDetailsService) {
         this.securityFilter = securityFilter;
         this.userDetailsService = userDetailsService;

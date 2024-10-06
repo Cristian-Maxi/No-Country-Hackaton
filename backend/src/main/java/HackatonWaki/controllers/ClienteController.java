@@ -10,6 +10,7 @@ import HackatonWaki.models.Cliente;
 import HackatonWaki.services.IClienteService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -27,6 +28,7 @@ public class ClienteController {
     private final IClienteService clienteService;
     private final ClienteMapper clienteMapper;
 
+    @Autowired
     public ClienteController(IClienteService userService, ClienteMapper clienteMapper) {
         this.clienteService = userService;
         this.clienteMapper = clienteMapper;

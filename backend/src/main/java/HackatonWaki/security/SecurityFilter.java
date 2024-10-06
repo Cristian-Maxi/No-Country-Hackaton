@@ -23,7 +23,6 @@ public class SecurityFilter extends OncePerRequestFilter {
 
     private final UserDetailsService userDetailsService;
 
-    @Autowired
     public SecurityFilter(ITokenService tokenService, UserDetailsService userDetailsService) {
         this.tokenService = tokenService;
         this.userDetailsService = userDetailsService;

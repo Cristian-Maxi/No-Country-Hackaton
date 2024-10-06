@@ -26,7 +26,7 @@ public class OpenAPI3Configuration {
             description("Server URL in Development environment");
 
     Server prodServer = new Server().
-            url("").
+            url("https://no-country-hackaton.onrender.com/").
             description("Server URL in Production environment");
 
     Info info = new Info()

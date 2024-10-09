@@ -9,5 +9,4 @@ public class HackatonWakiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HackatonWakiApplication.class, args);
 	}
-
 }
